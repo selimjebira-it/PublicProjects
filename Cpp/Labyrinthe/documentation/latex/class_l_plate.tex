@@ -1,0 +1,105 @@
+\hypertarget{class_l_plate}{}\section{L\+Plate Class Reference}
+\label{class_l_plate}\index{LPlate@{LPlate}}
+
+
+The \mbox{\hyperlink{class_l_plate}{L\+Plate}} class, plate L, hérite de plate.  
+
+
+
+
+{\ttfamily \#include $<$lplate.\+h$>$}
+
+Inheritance diagram for L\+Plate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_l_plate}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_l_plate_a6b4eebfd74b3a2b5e0fec88619c50a11}{L\+Plate}} (\mbox{\hyperlink{class_position}{Position}} pos, std\+::string const \&card=\char`\"{}\char`\"{}, unsigned rotation\+Lvl=0, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_i_plate}{I\+Plate}} constructeur de Lplate, hérite de plate. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_l_plate_a2714a969bb1eb66592a685b7f9f4de99}{type}} () const override
+\begin{DoxyCompactList}\small\item\em type retourne le type de la pièce, ici \char`\"{} L \char`\"{}; \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_l_plate_af4cc734d2490aa6c61472f68645f9374}\label{class_l_plate_af4cc734d2490aa6c61472f68645f9374}} 
+std\+::wstring {\bfseries shape} () const override
+\item 
+bool \mbox{\hyperlink{class_l_plate_ade5e8a7ead0c0eae0cbdb2a15aa6f32a}{is\+Movable}} () const override
+\begin{DoxyCompactList}\small\item\em is\+Movable retourne si la pièce est déplaçable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_l_plate_a93416ddd77521151dbe5c0c149d43291}\label{class_l_plate_a93416ddd77521151dbe5c0c149d43291}} 
+bool {\bfseries fixed\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_l_plate}{L\+Plate}} class, plate L, hérite de plate. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_l_plate_a6b4eebfd74b3a2b5e0fec88619c50a11}\label{class_l_plate_a6b4eebfd74b3a2b5e0fec88619c50a11}} 
+\index{LPlate@{LPlate}!LPlate@{LPlate}}
+\index{LPlate@{LPlate}!LPlate@{LPlate}}
+\subsubsection{\texorpdfstring{LPlate()}{LPlate()}}
+{\footnotesize\ttfamily L\+Plate\+::\+L\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos,  }\item[{std\+::string const \&}]{card = {\ttfamily \char`\"{}\char`\"{}},  }\item[{unsigned}]{rotation\+Lvl = {\ttfamily 0},  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_i_plate}{I\+Plate}} constructeur de Lplate, hérite de plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position de la plate sur le plateau \\
+\hline
+{\em card} & éventuel trésor présent sur le la plate \\
+\hline
+{\em rotation\+Lvl} & niveau de rotation de la plate \\
+\hline
+{\em fixed} & indique si il est possible de bougé la plate \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_l_plate_ade5e8a7ead0c0eae0cbdb2a15aa6f32a}\label{class_l_plate_ade5e8a7ead0c0eae0cbdb2a15aa6f32a}} 
+\index{LPlate@{LPlate}!isMovable@{isMovable}}
+\index{isMovable@{isMovable}!LPlate@{LPlate}}
+\subsubsection{\texorpdfstring{isMovable()}{isMovable()}}
+{\footnotesize\ttfamily bool L\+Plate\+::is\+Movable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+is\+Movable retourne si la pièce est déplaçable 
+
+\begin{DoxyReturn}{Returns}
+vrai si la pièce est déplaçable, faux sinon 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_plate}{Plate}}.
+
+\mbox{\Hypertarget{class_l_plate_a2714a969bb1eb66592a685b7f9f4de99}\label{class_l_plate_a2714a969bb1eb66592a685b7f9f4de99}} 
+\index{LPlate@{LPlate}!type@{type}}
+\index{type@{type}!LPlate@{LPlate}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily std\+::string L\+Plate\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+type retourne le type de la pièce, ici \char`\"{} L \char`\"{}; 
+
+\begin{DoxyReturn}{Returns}
+type de la pièce 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_plate}{Plate}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/lplate.\+h\end{DoxyCompactItemize}

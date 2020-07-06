@@ -1,0 +1,87 @@
+
+<odoo>
+    <template id="event_manager.report_diary_template">
+        <t t-name="eventmanager.diary">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <head>
+                                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+                            </head>
+                            <body>
+                                <header>
+                                    <h1>Diary Report</h1>
+                                </header>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="card-title">Agenda 
+                                            
+                                            
+                                            
+                                            
+                                            <span t-field="o.name" />
+                                        </h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <h2 class="card-title">
+                                            
+                                            Members
+                                            
+                                        </h2>
+                                        <ul class="list-group">
+                                            <t t-foreach="o.member_ids" t-as="member">
+                                                <li class="list-group-item">
+                                                    <h3>
+                                                        <t t-esc="member.name"/>
+                                                    </h3>
+                                                </li>
+                                            </t>
+                                        </ul>
+                                        <h2 class="card-title">
+                                            
+                                            Events
+                                            
+                                        </h2>
+                                        <ul class="list-group">
+                                            <t t-foreach="o.event_ids" t-as="event">
+                                                <li class="list-group-item">
+                                                    <h3>
+                                                        <t t-esc="event.name"/> - 
+                                                    
+                                                        
+                                                        
+                                                        <t t-esc="event.start_date"/> -
+                                                    
+                                                    
+                                                        
+                                                        
+                                                        <t t-esc="event.end_date" /> -
+
+                                                        
+                                                        
+                                                        <t t-esc="event.location_id.name" /> -
+
+                                                    
+                                                    
+                                                    </h3>
+                                                </li>
+                                            </t>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </body>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+    <report id="event_manager_report_diary"
+        name="event_manager.report_diary_template"
+        file="eventmanager.diary"
+        model="eventmanager.diary"
+        report_type="qweb-pdf"
+        string="Diary Report"
+        menu="True"/>
+</odoo>

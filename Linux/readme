@@ -1,0 +1,38 @@
+Auteur : Sélim Jebira
+Matricule : 4953
+Année : 2020
+Script : ftp_49853
+
+Script d'installation d'un Serveur FTP.
+
+chmod + x script.sh
+
+Ce qu'il fait:
+
+Il supprime et réinstalle les packets UFW et VSFTPD.
+Il installe openssh si non présent.
+Il désactive le firewall obsolète et configure le  nouveau firewall
+pour accepter les packets à destination de ftp ou ssh.
+Il configure l'arborescence du systeme de fichier pour gérer au mieux le chrooting
+Il permet l'ajout de nouveau utilisateurs et leur attribue les permissions adéquates 
+et un répertoire d'uploads partageable entre les ftp_users.
+et d'afficher le status des différents services
+
+Disclaimer:
+Ce script ne prends pas en compte la configuration réseau.
+Il se charge d'installer les composants nécéssaires au fonctionnement 
+en mode CHROOTER, des utilisateurs ftp et offre la possibilité d'automatiser leurs créations.
+il vous faudra pour ça leur fournir un nom quand il vous sera demandé add ftp user ? 
+si il vous viendrait à l'idée de changer les ports par défaut de votre service ftp ou ssh.
+je vous invite à utiliser respectivement les commandes:
+
+pour autoriser
+sudo ufw allow n_port
+
+pour supprimer
+sudo ufw delete n_rule
+
+qu'on obtient via
+sudo ufw status numbered
+
+

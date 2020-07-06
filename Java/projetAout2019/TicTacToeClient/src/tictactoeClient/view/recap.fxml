@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<fx:root id="AnchorPane" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="200.0" layoutY="150.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <Label fx:id="namePlayerA" text="PlayerA" />
+            <Separator orientation="VERTICAL" prefHeight="17.0" />
+            <Label fx:id="namePlayerB" text="PlayerB" />
+            <Separator orientation="VERTICAL" prefHeight="17.0" />
+            <Label fx:id="victories" text="Victories" />
+            <Separator orientation="VERTICAL" prefHeight="17.0" />
+            <Label fx:id="defeats" text="Defeats" />
+            <Separator orientation="VERTICAL" prefHeight="17.0" />
+            <Label fx:id="draws" text="Draws" />
+         </children>
+      </HBox>
+   </children>
+</fx:root>

@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/pawn">
+        <file>images/piontBleu.png</file>
+        <file>images/piontRose.png</file>
+        <file>images/piontRouge.png</file>
+        <file>images/piontVert.png</file>
+    </qresource>
+    <qresource prefix="/plate">
+        <file>images/iPlate.png</file>
+        <file>images/lplate.png</file>
+        <file>images/tPlate.png</file>
+    </qresource>
+    <qresource prefix="/divers">
+        <file>images/404notFound.jpg</file>
+        <file>images/gameIcon.PNG</file>
+        <file>images/exit.png</file>
+        <file>images/newGame.png</file>
+        <file>images/labyrinthe.png</file>
+        <file>images/background.jpg</file>
+        <file>images/start.png</file>
+        <file>images/sanGoku.jpg</file>
+        <file>images/montagne.jpg</file>
+    </qresource>
+</RCC>

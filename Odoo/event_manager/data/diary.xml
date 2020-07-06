@@ -1,0 +1,24 @@
+<odoo>
+    
+    <record id="diary0" model="eventmanager.diary">
+        <field name="name">Mon super Livre d'enfant</field>
+        <field name="diary_type">1</field>
+    </record>
+    <record id="diary1" model="eventmanager.diary">
+        <field name="name">Mon super Livre d'ados</field>
+        <field name="diary_type">2</field>
+    </record>
+    <record id="diary2" model="eventmanager.diary">
+        <field name="name">Mon super Livre d'amour</field>
+        <field name="diary_type">3</field>
+    </record>
+    <record id="diary3" model="eventmanager.diary">
+        <field name="name">Mon super Livre d'amis</field>
+        <field name="diary_type">1</field>
+    </record>
+    <record id="diary4" model="eventmanager.diary">
+        <field name="name">Mon super Livre d'animo(lol)</field>
+        <field name="diary_type">2</field>
+    </record>
+    
+</odoo>

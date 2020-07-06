@@ -1,0 +1,39 @@
+REMARQUES
+-----------------
+Pour plus de visibilité, les texte à remplacer sont en majuscule aux endroits erronés
+10x xxxxxxxx.png indique "tous les fichiers de numéro 10, donc 10a, 10b, 10c, etc.
+10+ indique qu'il faut ajouter un nouveau fichier de numéro 10. Donc si le dernier est 10f, celui à créer est 10g
+
+
+ERREURS
+-----------------
+01c SignUp.png
+	Erreur texte bouton. Le texte est "siNG up" au lien de "siGN up"
+
+1Xx xxxxxxxx.png
+	Erreur texte pseudo. Est "loG as pseudo", devrait être "loGGED as pseudo"
+
+11a Popup Your turn.png
+	Erreur texte "yoU turn" au lieu de "yoUR turn"
+
+
+
+MANQUES
+-----------------
+10x xxxxxxxx.png
+	Manque de maquettes si plus de 2 joueurs
+		Proposition : Afficher "You vs x other players" et afficher une fenêtre de tous les joueurs (donc ajouter une maquette aussi pour cette fenêtre)
+
+10+
+	Manque d'une maquette avec une partie en cours (déjà plusieurs case mises) avec la zone active définie, donc les autres zones grisées
+	Manque d'une maquette avec une partie en cours (déjà plusieurs case mises) avec la zone active à définir, donc les zones terminées grisée et celles possibles non grisées
+
+20+
+	Manque de maquettes pour les statistiques
+
+30+
+	Manque du visuel du menu déroulé hors partie avec certaines valeurs non affichées ou grisées pour "abandonner" par exemple
+	Manque du visuel du menu déroulé en partie avec certaines valeurs non affichées ou grisées pour "nouvelle partie" par exemple
+
+40+
+	Manque d'une maquette pour créer ou rejoindre un salon

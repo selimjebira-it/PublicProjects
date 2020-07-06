@@ -1,0 +1,25 @@
+<odoo>
+    <act_window id="launch_diary_wizard"
+        name="s'enregistrer"
+        src_model="eventmanager.diary"
+        res_model="eventmanager.diary_wizard"
+        view_mode="form"
+        target="new" key2="client_action_multi"/>
+    <record model="ir.ui.view" id="diary_wizard_form_view">
+        <field name="name">diarywizard.form</field>
+        <field name="model">eventmanager.diary_wizard</field>
+        <field name="arch" type="xml">
+            <form string="Subscribe">
+                <group>
+                    <field name="diary_ids" />
+                    <field name="subscriber_ids"/>
+                </group>
+                <footer>
+                    <button name="subscribe" type="object" string="Enregistrer" class="oe_highlight"/>or
+                    
+                    <button special="cancel" string="Annuler"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

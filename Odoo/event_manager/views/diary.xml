@@ -1,0 +1,41 @@
+<odoo>
+    <!-- diary form  -->
+    <record id="diary_view_form" model="ir.ui.view">
+        <field name="name">eventmanager.diary.view.form</field>
+        <field name="model">eventmanager.diary</field>
+        <field name="arch" type="xml">
+            <form string="diary Form">
+                <sheet>
+                    <group string="Schedule">
+                        <field name="name"/>
+                        <field name="event_ids" readonly='1'/>
+                        <field name="member_ids"/>
+                        <field name="diary_type"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- diary tree  -->
+    <record id="diary_view_tree" model="ir.ui.view">
+        <field name="name">eventmanager.diary.view.tree</field>
+        <field name="model">eventmanager.diary</field>
+        <field name="arch" type="xml">
+            <tree string="diary Tree">
+                <field name="name"/>
+                <field name="event_ids" readonly='1'/>
+                <field name="member_ids"/>
+                <field name="diary_type" />
+            </tree>
+        </field>
+    </record>
+    <!-- diary action  -->
+    <record id="diary_action" model="ir.actions.act_window">
+        <field name="name">Diaries</field>
+        <field name="res_model">eventmanager.diary</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- menu item  -->
+    <menuitem id="diary_menu" name="Diaries" action="diary_action" parent="main_menu"/>
+</odoo>

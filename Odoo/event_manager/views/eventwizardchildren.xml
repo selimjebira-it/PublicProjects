@@ -1,0 +1,25 @@
+<odoo>
+    <!-- action menu  -->
+    <act_window id="launch_event_wizard_children" name="Add Children Event" src_model="eventmanager.event" res_model="eventmanager.event_wizard_children" view_mode="form" target="new" key2="client_action_multi"/>
+    <!-- wizard view -->
+    <record model="ir.ui.view" id="event_wizard_form_view">
+        <field name="name">eventwizardchildren.form</field>
+        <field name="model">eventmanager.event_wizard_children</field>
+        <field name="arch" type="xml">
+            <form string="Add Children event">
+                <group>
+                    <field name="period"/>
+                    <field name="period_type"/>
+                    <field name="parent_id" ref="eventmanager.event"/>
+                    <field name="children_ids" ref="eventmanager.event"/>
+                </group>
+                <footer>
+                    <button name="save" type="object" string="Save" class="oe_highlight"/>
+or
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+    <!-- menu  -->
+    <menuitem
+    id="eventManager_menu"
+    name="EventManager"/>
+    <menuitem
+        id="main_menu"
+        name="EventManager"
+        parent="eventManager_menu"/>
+</odoo>

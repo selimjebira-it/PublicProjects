@@ -1,0 +1,141 @@
+\hypertarget{class_pawn}{}\section{Pawn Class Reference}
+\label{class_pawn}\index{Pawn@{Pawn}}
+
+
+The \mbox{\hyperlink{class_pawn}{Pawn}} class, pion du jeu.  
+
+
+
+
+{\ttfamily \#include $<$pawn.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pawn_aed538c943413933d765ce6e7a11e8cf8}{Pawn}} (string const \&color\+Name=\char`\"{}\char`\"{}, \mbox{\hyperlink{class_position}{Position}} posi=\mbox{\hyperlink{class_position}{Position}}(0, 0))
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pawn}{Pawn}} constructeur du pion. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_pawn_a3608fc8df7d72f124ff2baa1fd1b6927}{get\+Color}} () const
+\begin{DoxyCompactList}\small\item\em get\+Color retourne la couleur du pion \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_pawn_a917893aff236c2a13343ebda87c423e2}{position}} () const
+\begin{DoxyCompactList}\small\item\em position retourne la position du pion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pawn_a6a8646ce4ad7aa5291544ffb1127783f}{position}} (\mbox{\hyperlink{class_position}{Position}} const \&new\+Posi)
+\begin{DoxyCompactList}\small\item\em position set la position du pion \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pawn_a5fb75477bb2d47d0fdbb6e3b92d157cf}{operator==}} (\mbox{\hyperlink{class_pawn}{Pawn}} const \&other) const
+\begin{DoxyCompactList}\small\item\em operator == vérifie l\textquotesingle{}égalité des pions par rapport au nom de leur couleur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pawn_a9758ec0052198a4afe983d9a5430736d}{is\+On\+Start}} () const
+\begin{DoxyCompactList}\small\item\em is\+On\+Start indique si le pion est sur sa position de départ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pawn_af327b8a0a1de4353ca4ae0b01137fad5}\label{class_pawn_af327b8a0a1de4353ca4ae0b01137fad5}} 
+string \mbox{\hyperlink{class_pawn_af327b8a0a1de4353ca4ae0b01137fad5}{color\+\_\+}}
+\begin{DoxyCompactList}\small\item\em color\+\_\+ couleur du pion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pawn_a89a8a80f619de0e78358a0d3552d4a5b}\label{class_pawn_a89a8a80f619de0e78358a0d3552d4a5b}} 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_pawn_a89a8a80f619de0e78358a0d3552d4a5b}{posi\+\_\+}}
+\begin{DoxyCompactList}\small\item\em posi\+\_\+ position du pion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pawn_a714b30d332c5f38ec68092323292a417}\label{class_pawn_a714b30d332c5f38ec68092323292a417}} 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_pawn_a714b30d332c5f38ec68092323292a417}{starter}}
+\begin{DoxyCompactList}\small\item\em starter position de départ du pion \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_pawn}{Pawn}} class, pion du jeu. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pawn_aed538c943413933d765ce6e7a11e8cf8}\label{class_pawn_aed538c943413933d765ce6e7a11e8cf8}} 
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\subsubsection{\texorpdfstring{Pawn()}{Pawn()}}
+{\footnotesize\ttfamily Pawn\+::\+Pawn (\begin{DoxyParamCaption}\item[{string const \&}]{color\+Name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{class_position}{Position}}}]{posi = {\ttfamily \mbox{\hyperlink{class_position}{Position}}(0,0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_pawn}{Pawn}} constructeur du pion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color\+Name} & nom de la couleur du pion \\
+\hline
+{\em posi} & position du pion (sera aussi sa position de départ) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pawn_a3608fc8df7d72f124ff2baa1fd1b6927}\label{class_pawn_a3608fc8df7d72f124ff2baa1fd1b6927}} 
+\index{Pawn@{Pawn}!getColor@{getColor}}
+\index{getColor@{getColor}!Pawn@{Pawn}}
+\subsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily string Pawn\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Color retourne la couleur du pion 
+
+\begin{DoxyReturn}{Returns}
+la couleur du pion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_a9758ec0052198a4afe983d9a5430736d}\label{class_pawn_a9758ec0052198a4afe983d9a5430736d}} 
+\index{Pawn@{Pawn}!isOnStart@{isOnStart}}
+\index{isOnStart@{isOnStart}!Pawn@{Pawn}}
+\subsubsection{\texorpdfstring{isOnStart()}{isOnStart()}}
+{\footnotesize\ttfamily bool Pawn\+::is\+On\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+On\+Start indique si le pion est sur sa position de départ 
+
+\begin{DoxyReturn}{Returns}
+vrai si le pion est sur sa position de départ, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_a5fb75477bb2d47d0fdbb6e3b92d157cf}\label{class_pawn_a5fb75477bb2d47d0fdbb6e3b92d157cf}} 
+\index{Pawn@{Pawn}!operator==@{operator==}}
+\index{operator==@{operator==}!Pawn@{Pawn}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Pawn\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pawn}{Pawn}} const \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator == vérifie l\textquotesingle{}égalité des pions par rapport au nom de leur couleur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & l\textquotesingle{}autre pion à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si égaux, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_a917893aff236c2a13343ebda87c423e2}\label{class_pawn_a917893aff236c2a13343ebda87c423e2}} 
+\index{Pawn@{Pawn}!position@{position}}
+\index{position@{position}!Pawn@{Pawn}}
+\subsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Pawn\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+position retourne la position du pion 
+
+\begin{DoxyReturn}{Returns}
+la position du pion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_a6a8646ce4ad7aa5291544ffb1127783f}\label{class_pawn_a6a8646ce4ad7aa5291544ffb1127783f}} 
+\index{Pawn@{Pawn}!position@{position}}
+\index{position@{position}!Pawn@{Pawn}}
+\subsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Pawn\+::position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{new\+Posi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+position set la position du pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Posi} & nouvelle position du pion \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/pawn.\+h\end{DoxyCompactItemize}

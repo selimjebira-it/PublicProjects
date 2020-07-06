@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <record id="cours0" model="eventmanager.course">
+            <field name="slug">INF</field>
+            <field name="name">Informatique</field>
+            <field name="ects">10</field>
+        </record>
+        <record id="cours1" model="eventmanager.course">
+            <field name="slug">ERPG5</field>
+            <field name="name">Progiciel de gestion intégré</field>
+            <field name="ects">5</field>
+        </record>
+        <record id="cours2" model="eventmanager.course">
+            <field name="slug">INT</field>
+            <field name="name">Introduction</field>
+            <field name="ects">10</field>
+        </record>
+        <record id="cours3" model="eventmanager.course">
+            <field name="slug">ANA</field>
+            <field name="name">Analyse</field>
+            <field name="ects">5</field>
+        </record>
+        <record id="cours4" model="eventmanager.course">
+            <field name="slug">DEV2</field>
+            <field name="name">Développement</field>
+            <field name="ects">10</field>
+        </record>
+    </data>
+</odoo>

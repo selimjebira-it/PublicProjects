@@ -1,0 +1,123 @@
+\hypertarget{class_direction}{}\section{Direction Class Reference}
+\label{class_direction}\index{Direction@{Direction}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_direction_aba0c848f9db9831e6feb64d978e6d019}\label{class_direction_aba0c848f9db9831e6feb64d978e6d019}} 
+\mbox{\hyperlink{class_direction_aba0c848f9db9831e6feb64d978e6d019}{Direction}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_direction}{Direction}} constructeur de direction. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_direction_a89840cc08c0d1e1910a1ce32ab81a42e}{clock}} (string const \&) const
+\begin{DoxyCompactList}\small\item\em clock permet de tourner une position d\textquotesingle{}un quart de tour, dans le sens horloger. la direction d\textquotesingle{}origine n\textquotesingle{}est pas modifiée \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_direction_aca966ec39d7529ca7be6a0073f0d3710}{opposite}} (string const \&) const
+\begin{DoxyCompactList}\small\item\em retourn l\textquotesingle{}opposer de la position en paramètre \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_direction_a055bf00fa183b17ac2aa4202915d9a71}\label{class_direction_a055bf00fa183b17ac2aa4202915d9a71}} 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries get\+Position} (string const \&direction) const
+\item 
+\mbox{\Hypertarget{class_direction_a7daa0dcdcc06841891a830b7f2bd4956}\label{class_direction_a7daa0dcdcc06841891a830b7f2bd4956}} 
+{\bfseries Direction} (\mbox{\hyperlink{class_direction}{Direction}} const \&)=delete
+\item 
+std\+::vector$<$ string $>$ \mbox{\hyperlink{class_direction_a48435a79df040ca9a5111c45ed26e9ec}{values}} () const
+\begin{DoxyCompactList}\small\item\em values retourne la liste de toutes les directions \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_direction_a3be77e6a81164f95ebdef81001263d75}{vecteur}} (string direction, int ext=1) const
+\begin{DoxyCompactList}\small\item\em vecteur renvoie une \mbox{\hyperlink{class_position}{Position}} correspondant à ce qui faudrait ajouter à une position originale, pour que cette dernière indique un emplacement décaler d\textquotesingle{}une cetaine distance et dans une certaine direction (en somme un vecteur) par rapport à l\textquotesingle{}emplacement original. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_direction_a6736273d7e5a1b303c15c14dcc9ddf2d}\label{class_direction_a6736273d7e5a1b303c15c14dcc9ddf2d}} 
+const string {\bfseries Up\+\_\+} = \char`\"{}Up\char`\"{}
+\item 
+\mbox{\Hypertarget{class_direction_ae855fe40a6b5a1bb3f4293644b850ea9}\label{class_direction_ae855fe40a6b5a1bb3f4293644b850ea9}} 
+const string {\bfseries Right\+\_\+} = \char`\"{}Right\char`\"{}
+\item 
+\mbox{\Hypertarget{class_direction_a78a7a733ceaf7ac62c1e76b3a30d26f6}\label{class_direction_a78a7a733ceaf7ac62c1e76b3a30d26f6}} 
+const string {\bfseries Down\+\_\+} = \char`\"{}Down\char`\"{}
+\item 
+\mbox{\Hypertarget{class_direction_a57d13af88a9580d091d64ea1c9b0b993}\label{class_direction_a57d13af88a9580d091d64ea1c9b0b993}} 
+const string {\bfseries Left\+\_\+} = \char`\"{}Left\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_direction_ab74c9dc6d3c512463cb5345571c22a13}\label{class_direction_ab74c9dc6d3c512463cb5345571c22a13}} 
+std\+::vector$<$ string $>$ {\bfseries values\+\_\+}
+\item 
+\mbox{\Hypertarget{class_direction_a7ad1793e678cbab51b22f3d04119bbfa}\label{class_direction_a7ad1793e678cbab51b22f3d04119bbfa}} 
+\mbox{\hyperlink{class_position}{Position}} const {\bfseries up\+Position}
+\item 
+\mbox{\Hypertarget{class_direction_ab09a3b078ed61a7e08b0661ba57f32df}\label{class_direction_ab09a3b078ed61a7e08b0661ba57f32df}} 
+\mbox{\hyperlink{class_position}{Position}} const {\bfseries right\+Position}
+\item 
+\mbox{\Hypertarget{class_direction_a7a95f3f698b75f944c9beed6d9dd33da}\label{class_direction_a7a95f3f698b75f944c9beed6d9dd33da}} 
+\mbox{\hyperlink{class_position}{Position}} const {\bfseries down\+D\+Position}
+\item 
+\mbox{\Hypertarget{class_direction_ab58a1e82e227bd529c1b163361e16739}\label{class_direction_ab58a1e82e227bd529c1b163361e16739}} 
+\mbox{\hyperlink{class_position}{Position}} const {\bfseries left\+Position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_direction_a89840cc08c0d1e1910a1ce32ab81a42e}\label{class_direction_a89840cc08c0d1e1910a1ce32ab81a42e}} 
+\index{Direction@{Direction}!clock@{clock}}
+\index{clock@{clock}!Direction@{Direction}}
+\subsubsection{\texorpdfstring{clock()}{clock()}}
+{\footnotesize\ttfamily string Direction\+::clock (\begin{DoxyParamCaption}\item[{string const \&}]{direction }\end{DoxyParamCaption}) const}
+
+
+
+clock permet de tourner une position d\textquotesingle{}un quart de tour, dans le sens horloger. la direction d\textquotesingle{}origine n\textquotesingle{}est pas modifiée 
+
+\begin{DoxyReturn}{Returns}
+une direction correspondant à celle d\textquotesingle{}origine après rotation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_direction_aca966ec39d7529ca7be6a0073f0d3710}\label{class_direction_aca966ec39d7529ca7be6a0073f0d3710}} 
+\index{Direction@{Direction}!opposite@{opposite}}
+\index{opposite@{opposite}!Direction@{Direction}}
+\subsubsection{\texorpdfstring{opposite()}{opposite()}}
+{\footnotesize\ttfamily string Direction\+::opposite (\begin{DoxyParamCaption}\item[{string const \&}]{direction }\end{DoxyParamCaption}) const}
+
+
+
+retourn l\textquotesingle{}opposer de la position en paramètre 
+
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}opposé de la position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_direction_a48435a79df040ca9a5111c45ed26e9ec}\label{class_direction_a48435a79df040ca9a5111c45ed26e9ec}} 
+\index{Direction@{Direction}!values@{values}}
+\index{values@{values}!Direction@{Direction}}
+\subsubsection{\texorpdfstring{values()}{values()}}
+{\footnotesize\ttfamily std\+::vector$<$string$>$ Direction\+::values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+values retourne la liste de toutes les directions 
+
+\begin{DoxyReturn}{Returns}
+la liste de toutes les directions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_direction_a3be77e6a81164f95ebdef81001263d75}\label{class_direction_a3be77e6a81164f95ebdef81001263d75}} 
+\index{Direction@{Direction}!vecteur@{vecteur}}
+\index{vecteur@{vecteur}!Direction@{Direction}}
+\subsubsection{\texorpdfstring{vecteur()}{vecteur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Direction\+::vecteur (\begin{DoxyParamCaption}\item[{string}]{direction,  }\item[{int}]{ext = {\ttfamily 1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+vecteur renvoie une \mbox{\hyperlink{class_position}{Position}} correspondant à ce qui faudrait ajouter à une position originale, pour que cette dernière indique un emplacement décaler d\textquotesingle{}une cetaine distance et dans une certaine direction (en somme un vecteur) par rapport à l\textquotesingle{}emplacement original. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & direction de décalage de la position \\
+\hline
+{\em ext} & distance de décalage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la position à additionner pour décalé. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/direction.\+h\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/direction.\+cpp\end{DoxyCompactItemize}

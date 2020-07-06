@@ -1,0 +1,166 @@
+\hypertarget{class_plate}{}\section{Plate Class Reference}
+\label{class_plate}\index{Plate@{Plate}}
+Inheritance diagram for Plate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plate}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_plate_a07e82e84811b82030f8497f340b6b92e}{$\sim$\+Plate}} ()=0
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_plate_a05230b33562e66bd87d530eb4915c415}{get\+Openings}} () const
+\item 
+string \mbox{\hyperlink{class_plate_afe793f974b124b90ee799f92de166eac}{get\+Card}} () const
+\item 
+unsigned \mbox{\hyperlink{class_plate_af9021c86bc00272cc47686924f832055}{get\+Rotation\+Lvl}} () const
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_plate_aecd71bf092f486179d02605fa2c7771e}{get\+Position}} () const
+\item 
+\mbox{\Hypertarget{class_plate_a145929c834124acc60d865b5fb2cc5ee}\label{class_plate_a145929c834124acc60d865b5fb2cc5ee}} 
+void {\bfseries set\+Position} (\mbox{\hyperlink{class_position}{Position}} \&pos)
+\item 
+void \mbox{\hyperlink{class_plate_ae1b0689ce319dcc4fc2e9466f898947f}{rotate}} (unsigned)
+\item 
+bool \mbox{\hyperlink{class_plate_a2a0f4f57590ffec3305617072bb9dd33}{connected}} (\mbox{\hyperlink{class_plate}{Plate}} const \&other) const
+\item 
+\mbox{\Hypertarget{class_plate_a68aa560ce45c5d88d33bb4280244c914}\label{class_plate_a68aa560ce45c5d88d33bb4280244c914}} 
+virtual std\+::string {\bfseries type} () const =0
+\item 
+\mbox{\Hypertarget{class_plate_a21f9eaef751f4c0009dd9532a9115891}\label{class_plate_a21f9eaef751f4c0009dd9532a9115891}} 
+virtual std\+::wstring {\bfseries shape} () const =0
+\item 
+\mbox{\Hypertarget{class_plate_a2a00c2573b936288e48af9a25bb88178}\label{class_plate_a2a00c2573b936288e48af9a25bb88178}} 
+virtual bool {\bfseries is\+Movable} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plate_a800a12879e2044dcde01e0be9060866d}\label{class_plate_a800a12879e2044dcde01e0be9060866d}} 
+{\bfseries Plate} (\mbox{\hyperlink{class_position}{Position}} position=\mbox{\hyperlink{class_position}{Position}}(0, 0), std\+::string const \&card=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_plate_a792f5bca5912b7eca3bc0a516cc87f75}{openings\+\_\+}}
+\item 
+std\+::vector$<$ std\+::wstring $>$ \mbox{\hyperlink{class_plate_a6c1abc6a89b53eb901f19c2aaaf0320a}{shapes\+\_\+}}
+\item 
+\mbox{\hyperlink{class_direction}{Direction}} \mbox{\hyperlink{class_plate_abd3b1c8174eb9b7ddfcc4b65d0f58359}{direction\+Enum\+\_\+}}
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_plate_a0b1a00268147cb0285595d28ff4141a4}{position\+\_\+}}
+\item 
+unsigned \mbox{\hyperlink{class_plate_a02ccbda576b947364d5ae62b8ec15b61}{rotation\+Lvl\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_plate_a9ee1e8fbce0414bd861cef599e98705e}{card\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_plate_a07e82e84811b82030f8497f340b6b92e}\label{class_plate_a07e82e84811b82030f8497f340b6b92e}} 
+\index{Plate@{Plate}!````~Plate@{$\sim$Plate}}
+\index{````~Plate@{$\sim$Plate}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{$\sim$Plate()}{~Plate()}}
+{\footnotesize\ttfamily Plate\+::$\sim$\+Plate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [pure virtual]}, {\ttfamily [default]}}
+
+$<$ Destructeur 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_plate_a2a0f4f57590ffec3305617072bb9dd33}\label{class_plate_a2a0f4f57590ffec3305617072bb9dd33}} 
+\index{Plate@{Plate}!connected@{connected}}
+\index{connected@{connected}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{connected()}{connected()}}
+{\footnotesize\ttfamily bool Plate\+::connected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_plate}{Plate}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+méthode permettant de voir si deux plates tuiles sont connectées pas leur chemin \begin{DoxyReturn}{Returns}
+vrai si les pièces sont connectées, faux autrement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_plate_afe793f974b124b90ee799f92de166eac}\label{class_plate_afe793f974b124b90ee799f92de166eac}} 
+\index{Plate@{Plate}!getCard@{getCard}}
+\index{getCard@{getCard}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{getCard()}{getCard()}}
+{\footnotesize\ttfamily string Plate\+::get\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Méthode qui retourne le trésort de la carte. \begin{DoxyReturn}{Returns}
+le trésort de la carte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_plate_a05230b33562e66bd87d530eb4915c415}\label{class_plate_a05230b33562e66bd87d530eb4915c415}} 
+\index{Plate@{Plate}!getOpenings@{getOpenings}}
+\index{getOpenings@{getOpenings}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{getOpenings()}{getOpenings()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Plate\+::get\+Openings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Méthode qui retourne les ouverture de la tuile \begin{DoxyReturn}{Returns}
+$\ast$ les ouverture de la tuile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_plate_aecd71bf092f486179d02605fa2c7771e}\label{class_plate_aecd71bf092f486179d02605fa2c7771e}} 
+\index{Plate@{Plate}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Plate\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Méthode qui retourne la position de la tuile \begin{DoxyReturn}{Returns}
+la position de la tuile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_plate_af9021c86bc00272cc47686924f832055}\label{class_plate_af9021c86bc00272cc47686924f832055}} 
+\index{Plate@{Plate}!getRotationLvl@{getRotationLvl}}
+\index{getRotationLvl@{getRotationLvl}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{getRotationLvl()}{getRotationLvl()}}
+{\footnotesize\ttfamily unsigned Plate\+::get\+Rotation\+Lvl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Méthode qui retourne le niveau de rotation de la tuile \begin{DoxyReturn}{Returns}
+le niveau de rotation de la tuile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_plate_ae1b0689ce319dcc4fc2e9466f898947f}\label{class_plate_ae1b0689ce319dcc4fc2e9466f898947f}} 
+\index{Plate@{Plate}!rotate@{rotate}}
+\index{rotate@{rotate}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Plate\+::rotate (\begin{DoxyParamCaption}\item[{unsigned}]{a = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+méthode permetant de retourner la pièce d\textquotesingle{}un quart de tour vers la droite nombre de quarts de tour 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_plate_a9ee1e8fbce0414bd861cef599e98705e}\label{class_plate_a9ee1e8fbce0414bd861cef599e98705e}} 
+\index{Plate@{Plate}!card\_@{card\_}}
+\index{card\_@{card\_}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{card\_}{card\_}}
+{\footnotesize\ttfamily std\+::string Plate\+::card\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Trésore de labyrinte présent sur chaque tuile, les tuiles sans réel trésor on le trésor \char`\"{}aucun\char`\"{} (ou \char`\"{}\char`\"{}) \mbox{\Hypertarget{class_plate_abd3b1c8174eb9b7ddfcc4b65d0f58359}\label{class_plate_abd3b1c8174eb9b7ddfcc4b65d0f58359}} 
+\index{Plate@{Plate}!directionEnum\_@{directionEnum\_}}
+\index{directionEnum\_@{directionEnum\_}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{directionEnum\_}{directionEnum\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_direction}{Direction}} Plate\+::direction\+Enum\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+enum des différentes directions possible \mbox{\Hypertarget{class_plate_a792f5bca5912b7eca3bc0a516cc87f75}\label{class_plate_a792f5bca5912b7eca3bc0a516cc87f75}} 
+\index{Plate@{Plate}!openings\_@{openings\_}}
+\index{openings\_@{openings\_}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{openings\_}{openings\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Plate\+::openings\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Classe représentant les tuiles (coullissantes et non coullisantes) sur le plateau. Cette classe est abstraite, il en découle des tuiles en \char`\"{}\+T\char`\"{}, \char`\"{}\+L\char`\"{} et \char`\"{}\+I\char`\"{}.Liste des ouverture d\textquotesingle{}une pièce par rapport à l\textquotesingle{}extérieur, par exemple une truile \char`\"{}\+L\char`\"{} aura haut et bas \mbox{\Hypertarget{class_plate_a0b1a00268147cb0285595d28ff4141a4}\label{class_plate_a0b1a00268147cb0285595d28ff4141a4}} 
+\index{Plate@{Plate}!position\_@{position\_}}
+\index{position\_@{position\_}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{position\_}{position\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Plate\+::position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\hyperlink{class_position}{Position}} de la tuile sur le plateau \mbox{\Hypertarget{class_plate_a02ccbda576b947364d5ae62b8ec15b61}\label{class_plate_a02ccbda576b947364d5ae62b8ec15b61}} 
+\index{Plate@{Plate}!rotationLvl\_@{rotationLvl\_}}
+\index{rotationLvl\_@{rotationLvl\_}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{rotationLvl\_}{rotationLvl\_}}
+{\footnotesize\ttfamily unsigned Plate\+::rotation\+Lvl\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+niveau de rotation de la pièce (les openings changeant également avec le niveau de rotation) \mbox{\Hypertarget{class_plate_a6c1abc6a89b53eb901f19c2aaaf0320a}\label{class_plate_a6c1abc6a89b53eb901f19c2aaaf0320a}} 
+\index{Plate@{Plate}!shapes\_@{shapes\_}}
+\index{shapes\_@{shapes\_}!Plate@{Plate}}
+\subsubsection{\texorpdfstring{shapes\_}{shapes\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::wstring$>$ Plate\+::shapes\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sert à l\textquotesingle{}affichage de la plate 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/plate.\+h\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/plate.\+cpp\end{DoxyCompactItemize}

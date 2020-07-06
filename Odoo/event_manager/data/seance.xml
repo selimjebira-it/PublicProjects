@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+
+        
+        <function id ="seance_init" model="eventmanager.seance" name="init_seance"/>
+        
+    </data>
+</odoo>

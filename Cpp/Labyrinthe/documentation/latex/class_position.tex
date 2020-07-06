@@ -1,0 +1,127 @@
+\hypertarget{class_position}{}\section{Position Class Reference}
+\label{class_position}\index{Position@{Position}}
+
+
+The \mbox{\hyperlink{class_position}{Position}} class, permet de définir une position x, y.  
+
+
+
+
+{\ttfamily \#include $<$position.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position_aefa590074d28918732e477cf447d16b8}{Position}} (int \mbox{\hyperlink{class_position_a085247752073466c9f5966c90a32a790}{x}}=0, int \mbox{\hyperlink{class_position_aca40f7c92b1c799d5add662bf2c5cc11}{y}}=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_position}{Position}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_position_a085247752073466c9f5966c90a32a790}{x}} () const
+\begin{DoxyCompactList}\small\item\em x retourne la coordonée x \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_position_aca40f7c92b1c799d5add662bf2c5cc11}{y}} () const
+\begin{DoxyCompactList}\small\item\em y retourne la coordonée y \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_position_a4ac05a6dc928c47019dff3b5c9eb8e86}{operator$>$}} (\mbox{\hyperlink{class_position}{Position}} const \&other) const
+\begin{DoxyCompactList}\small\item\em operator $>$ indique si 100$\ast$y + x de la position est plus grand que 100$\ast$y + x de l\textquotesingle{}autre position \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_position_a7b6d74a3e3de3cd9f689e82df0fccfd7}{operator$<$}} (\mbox{\hyperlink{class_position}{Position}} const \&other) const
+\begin{DoxyCompactList}\small\item\em operator $<$ indique si la position est plus petite qu\textquotesingle{}une autre c\textquotesingle{}est à dire si elle n\textquotesingle{}est pas plus grande ou égale ($<$, ==) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_position_a5eee55bf1718fb7c4f296930c38087fe}\label{class_position_a5eee55bf1718fb7c4f296930c38087fe}} 
+int \mbox{\hyperlink{class_position_a5eee55bf1718fb7c4f296930c38087fe}{x\+\_\+}}
+\begin{DoxyCompactList}\small\item\em x\+\_\+ coordonée x \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_position_ac18ebbc60c7d67bb6b30fc1ef82948af}\label{class_position_ac18ebbc60c7d67bb6b30fc1ef82948af}} 
+int \mbox{\hyperlink{class_position_ac18ebbc60c7d67bb6b30fc1ef82948af}{y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em y\+\_\+ coordonée y \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_position}{Position}} class, permet de définir une position x, y. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_position_aefa590074d28918732e477cf447d16b8}\label{class_position_aefa590074d28918732e477cf447d16b8}} 
+\index{Position@{Position}!Position@{Position}}
+\index{Position@{Position}!Position@{Position}}
+\subsubsection{\texorpdfstring{Position()}{Position()}}
+{\footnotesize\ttfamily Position\+::\+Position (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_position}{Position}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordonée x \\
+\hline
+{\em y} & coordonée y \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_position_a7b6d74a3e3de3cd9f689e82df0fccfd7}\label{class_position_a7b6d74a3e3de3cd9f689e82df0fccfd7}} 
+\index{Position@{Position}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Position@{Position}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Position\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator $<$ indique si la position est plus petite qu\textquotesingle{}une autre c\textquotesingle{}est à dire si elle n\textquotesingle{}est pas plus grande ou égale ($<$, ==) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & l\textquotesingle{}autre position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si la position est plus petite qu\textquotesingle{}une autre c\textquotesingle{}est à dire si elle n\textquotesingle{}est pas plus grande ou égale ($<$, ==), faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_a4ac05a6dc928c47019dff3b5c9eb8e86}\label{class_position_a4ac05a6dc928c47019dff3b5c9eb8e86}} 
+\index{Position@{Position}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Position@{Position}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Position\+::operator$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator $>$ indique si 100$\ast$y + x de la position est plus grand que 100$\ast$y + x de l\textquotesingle{}autre position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & l\textquotesingle{}autre position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retourne vrai si 100$\ast$y + x de la position est plus grand que 100$\ast$y + x de l\textquotesingle{}autre position, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_a085247752073466c9f5966c90a32a790}\label{class_position_a085247752073466c9f5966c90a32a790}} 
+\index{Position@{Position}!x@{x}}
+\index{x@{x}!Position@{Position}}
+\subsubsection{\texorpdfstring{x()}{x()}}
+{\footnotesize\ttfamily int Position\+::x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+x retourne la coordonée x 
+
+\begin{DoxyReturn}{Returns}
+la coordonée x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_position_aca40f7c92b1c799d5add662bf2c5cc11}\label{class_position_aca40f7c92b1c799d5add662bf2c5cc11}} 
+\index{Position@{Position}!y@{y}}
+\index{y@{y}!Position@{Position}}
+\subsubsection{\texorpdfstring{y()}{y()}}
+{\footnotesize\ttfamily int Position\+::y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+y retourne la coordonée y 
+
+\begin{DoxyReturn}{Returns}
+la coordonée y 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/position.\+h\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/position.\+cpp\end{DoxyCompactItemize}

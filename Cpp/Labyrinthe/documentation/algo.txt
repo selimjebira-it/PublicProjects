@@ -1,0 +1,51 @@
+algorithme trouverChemin(depart, fin: Position)-> liste de Position
+	chemin : Liste de position
+	chemin.pushBack(depart);
+	si depart = fin alors 
+		retourner chemin
+	fin si
+	chercherChemin(fin, chemin)
+	retouner chemin
+fin algorithme
+
+algorithme chercherChemin(fin, chemin) -> booléen	
+	int x, y
+	pour i de 1 à 4 faire
+		selon que i vaut 
+			1 : x = 0;
+				y = -1;
+			2 : x = -1;
+				y = 0;
+			3 : x = 1;
+				y = 0;
+			4 : x = 0;
+				y = 1;
+			default : erreur
+		fin selon que
+		Position temp(chemin.getLast().X() + x, chemin.getLast.Y() + y)
+		si estAcceptable(temp, chemin) alors
+			chemin.pushBack(temp)
+			si temp = fin alors	
+				retourner vrai
+			sinon si chercherChemin(fin, chemin) faire
+				retourner vrai;
+			fin sichemin.deletLast()
+		fin si
+	fin pour							
+	retourner faux
+fin algorithme
+
+
+algorithme estAcceptable(Position temp, chemin:Liste de Position) -> booléen
+	si existe(temp)	alors
+		si NON(chemin.contains(temp)) alors
+			si board.get(chemin.getLast()).isConnected(board.get(temp)) alors
+				retouner vrai
+			fin si
+		fin si
+	fin si 
+	retouner faux;
+fin algorithme
+
+algorithme isConnected(other: Plate, pos : Position)-> booléen
+	

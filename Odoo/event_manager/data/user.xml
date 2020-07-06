@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record id="event_manager.user0" model="res.users">
+            <field name="login">Anthony</field>
+            <field name="name">Anthony</field>
+        </record>
+        <record id="event_manager.user1" model="res.users">
+            <field name="login">Martin</field>
+            <field name="name">martin</field>
+        </record>
+        <record id="event_manager.user2" model="res.users">
+            <field name="login">Etienne</field>
+            <field name="name">Etienne</field>
+        </record>
+        <record id="event_manager.user3" model="res.users">
+            <field name="login">Youri</field>
+            <field name="name">Youri</field>
+        </record>
+        <record id="event_manager.user4" model="res.users">
+            <field name="login">Selim</field>
+            <field name="name">Selim</field>
+        </record>
+    </data>
+</odoo>

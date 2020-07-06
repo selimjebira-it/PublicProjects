@@ -1,0 +1,349 @@
+\hypertarget{class_game}{}\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+The \mbox{\hyperlink{class_game}{Game}} class repésente la logique du jeu et fait interagir les différents éléments du jeu ensemble.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_ad7fdf24774752f47b6a14827e8bbc073}\label{class_game_ad7fdf24774752f47b6a14827e8bbc073}} 
+enum \mbox{\hyperlink{class_game_ad7fdf24774752f47b6a14827e8bbc073}{Game\+Status}} \{ {\bfseries not\+Open}, 
+{\bfseries running}, 
+{\bfseries finished}
+ \}
+\begin{DoxyCompactList}\small\item\em The Game\+Status enum renseigne sur l\textquotesingle{}état du jeu en général (en cours, fini, ...) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_ad84f6c74c0b4b323fe4b13b7ad31f696}\label{class_game_ad84f6c74c0b4b323fe4b13b7ad31f696}} 
+enum \mbox{\hyperlink{class_game_ad84f6c74c0b4b323fe4b13b7ad31f696}{Turn\+Status}} \{ {\bfseries Piece\+Moved}, 
+{\bfseries Pawn\+Moved}, 
+{\bfseries Nothing\+Moved}, 
+{\bfseries Card\+Discovered}
+ \}
+\begin{DoxyCompactList}\small\item\em The Turn\+Status enum renseigne sur l\textquotesingle{}état d\textquotesingle{}un tour de jeu en particulier (pièce déplacée, piont bougé, rien de fait, carte découverte) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_game}{Game}} constructeur de game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_af7453615da19dfb6d9646bf33acccccb}{init}} (int max=12)
+\begin{DoxyCompactList}\small\item\em init permet d\textquotesingle{}initialiser tout les composants du jeu, on peut choisir le nombre max de cartes par joueurs, ceci n\textquotesingle{}est qu\textquotesingle{}un maximum, les joueurs peuvent donc avoir moins de cartes s\textquotesingle{}il il n\textquotesingle{}y en a pas assez pour que tous aient le max, avant d\textquotesingle{}init, il faut au minimum avoir ajouté 2 joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a99198ff9faa792eeea8b24435e34cd6d}{add\+Player}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em add\+Player permet d\textquotesingle{}ajouter un joueur au jeu, le jeu ne doit pas encore avoir commencé et on ne peut pas ajouter plus de 4 joueurs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a972bf039217d747db1fd3487574a58a8}{move\+Pawn}} (\mbox{\hyperlink{class_position}{Position}} const \&)
+\begin{DoxyCompactList}\small\item\em move\+Pawn permet de déplacer un pion su le plateau de jeu, il faut que le joueur détenteur du pion aie préalablement insérer une plate dans le plateau, le pion ne peut se déplacer que sur un sans coupure (les plates doivent être connectées entre elles, il ne doit pas y avoir de mur qui barre la route). Si le piont à bien pu se déplacer, vérifie si le joueur à trouvé un trésore qu\textquotesingle{}il recherchait ou s\textquotesingle{}il a fini la partie enretournant sur sa base. Disponible une fois par tour. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a2e527b9d67d6f70a1b911a8e4fca77e4}{insert\+Plate}} (\mbox{\hyperlink{class_position}{Position}} const \&)
+\begin{DoxyCompactList}\small\item\em insert\+Plate permet d\textquotesingle{}insérer une pièce dans le plateau de jeu, il est possible d\textquotesingle{}inserer une pièce (plate) sur les cases extérieurs du board et avec une des coordonées impaire. Disponible une fois par tour. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a1d391affe8e71a520a9e210e76b23b45}{skip}} ()
+\begin{DoxyCompactList}\small\item\em skip permet de passer son tour, n\textquotesingle{}est possible que si le joueur à inséré une plate, disponible une fois par tour. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a6ba6dd6ff7977278e7884642d167549d}{rotate}} (unsigned=1)
+\begin{DoxyCompactList}\small\item\em rotate permet de rotate la plate \char`\"{}libre\char`\"{} d\textquotesingle{}un quart de tour dans le sens horloger \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_aa2d938aa918268060e63980c7efd86f8}\label{class_game_aa2d938aa918268060e63980c7efd86f8}} 
+void \mbox{\hyperlink{class_game_aa2d938aa918268060e63980c7efd86f8}{end}} ()
+\begin{DoxyCompactList}\small\item\em end ferme le jeu \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_ad7fdf24774752f47b6a14827e8bbc073}{Game\+Status}} \mbox{\hyperlink{class_game_abfd280f5fdc614d8542058ca7ac82ea5}{get\+Game\+State}} () const
+\begin{DoxyCompactList}\small\item\em get\+Game\+State retourne le satut global du jeu \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_ad84f6c74c0b4b323fe4b13b7ad31f696}{Turn\+Status}} \mbox{\hyperlink{class_game_a73c4d8e59b1ad43982115e9ff3be4d80}{get\+Turnstate}} () const
+\begin{DoxyCompactList}\small\item\em get\+Turnstate retourne le satut du tour de jeu \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}} const  \& \mbox{\hyperlink{class_game_a202099c9ce99f80dc84091761d3292eb}{get\+Current\+Player}} () const
+\begin{DoxyCompactList}\small\item\em get\+Current\+Player retourne le joueur courant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plate}{Plate}} const  \& \mbox{\hyperlink{class_game_a09dad4385b60fb6af3c93de9d7dad0dd}{get\+Current\+Plate}} () const
+\begin{DoxyCompactList}\small\item\em get\+Current\+Plate retourne la plate courrante ou \char`\"{}plate libre\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_game_a5d8355f24fa21135389876710cf8cbf3}{find\+Card\+On\+Board}} (std\+::string const \&name\+Ofthe\+Card) const
+\begin{DoxyCompactList}\small\item\em find\+Card\+On\+Board permet de trouver la position d\textquotesingle{}un trésor sur le board. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_player}{Player}} $>$ \mbox{\hyperlink{class_game_a8561913d7635ac1ded36b0236ece61f7}{get\+Players}} () const
+\begin{DoxyCompactList}\small\item\em get\+Players retourne la liste de tous les joueurs \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}} const  $\ast$ \mbox{\hyperlink{class_game_af1698fea8cf96a95427a1c5e363eac37}{get\+Winner}} () const
+\begin{DoxyCompactList}\small\item\em get\+Winner retourne le joueur gagnant \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plate}{Plate}} const  \& \mbox{\hyperlink{class_game_a669625eaa5a522e8012a3a5ea4bb1a39}{get\+Plate}} (\mbox{\hyperlink{class_position}{Position}} const \&pos) const
+\begin{DoxyCompactList}\small\item\em get\+Plate retourne la plate présente sur le plateau de jeu à la position donnée. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_board}{Board}} \& \mbox{\hyperlink{class_game_a0df3fa77221ce465d013d4faf08c0a84}{get\+Board}} () const
+\begin{DoxyCompactList}\small\item\em get\+Board retourne le plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a1a21ba908bedd3ca0ae4ea0f63c621d4}{get\+Cards\+On\+Board}} (map$<$ \mbox{\hyperlink{class_position}{Position}}, string $>$ \&map\+To\+Fill) const
+\begin{DoxyCompactList}\small\item\em get\+Cards\+On\+Board retourne une map de toutes les trésors et leur position sur le plateau de jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_a19e1908108f33089972f795ed7489473}\label{class_game_a19e1908108f33089972f795ed7489473}} 
+void {\bfseries set\+Current\+Player} ()
+\item 
+\mbox{\Hypertarget{class_game_aea83fb571c99bbfd36b19ecb146b164e}\label{class_game_aea83fb571c99bbfd36b19ecb146b164e}} 
+bool {\bfseries is\+On\+Objectif} ()
+\item 
+\mbox{\Hypertarget{class_game_a8900e49eb32ff7be3d52ceeae0ce8f1a}\label{class_game_a8900e49eb32ff7be3d52ceeae0ce8f1a}} 
+void {\bfseries Pawns\+After\+Insert} (\mbox{\hyperlink{class_position}{Position}} const \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_a534b4dd49eb8c2533ff20e6641a1d107}\label{class_game_a534b4dd49eb8c2533ff20e6641a1d107}} 
+\mbox{\hyperlink{class_board}{Board}} {\bfseries board\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_abe937e1a5d1a22d6cdaa8cabb9152c67}\label{class_game_abe937e1a5d1a22d6cdaa8cabb9152c67}} 
+\mbox{\hyperlink{class_card}{Card}} const {\bfseries enum\+Card\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_a9717ae5b145e457f045b38e4fac623f7}\label{class_game_a9717ae5b145e457f045b38e4fac623f7}} 
+\mbox{\hyperlink{class_color}{Color}} const {\bfseries enum\+Color\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_af5269c50ea7d59e15c7abed439f13a83}\label{class_game_af5269c50ea7d59e15c7abed439f13a83}} 
+vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_player}{Player}} $>$ $>$ {\bfseries players\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_a5111b35a6c981465438f76308a6abc76}\label{class_game_a5111b35a6c981465438f76308a6abc76}} 
+\mbox{\hyperlink{class_game_ad7fdf24774752f47b6a14827e8bbc073}{Game\+Status}} {\bfseries game\+Status\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_a8bf9696c3e7e782203b634f79dde5994}\label{class_game_a8bf9696c3e7e782203b634f79dde5994}} 
+\mbox{\hyperlink{class_game_ad84f6c74c0b4b323fe4b13b7ad31f696}{Turn\+Status}} {\bfseries turn\+Status\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_a5697736899760ca3bf12a013cf2843c9}\label{class_game_a5697736899760ca3bf12a013cf2843c9}} 
+int {\bfseries indice\+Current\+Player}
+\item 
+\mbox{\Hypertarget{class_game_a94ac538c726b0c162fbc7c24dd7e0ce9}\label{class_game_a94ac538c726b0c162fbc7c24dd7e0ce9}} 
+vector$<$ std\+::string $>$ {\bfseries names\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_game}{Game}} class repésente la logique du jeu et fait interagir les différents éléments du jeu ensemble. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a99198ff9faa792eeea8b24435e34cd6d}\label{class_game_a99198ff9faa792eeea8b24435e34cd6d}} 
+\index{Game@{Game}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!Game@{Game}}
+\subsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily void Game\+::add\+Player (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+add\+Player permet d\textquotesingle{}ajouter un joueur au jeu, le jeu ne doit pas encore avoir commencé et on ne peut pas ajouter plus de 4 joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & nom du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a5d8355f24fa21135389876710cf8cbf3}\label{class_game_a5d8355f24fa21135389876710cf8cbf3}} 
+\index{Game@{Game}!findCardOnBoard@{findCardOnBoard}}
+\index{findCardOnBoard@{findCardOnBoard}!Game@{Game}}
+\subsubsection{\texorpdfstring{findCardOnBoard()}{findCardOnBoard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Game\+::find\+Card\+On\+Board (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name\+Ofthe\+Card }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+find\+Card\+On\+Board permet de trouver la position d\textquotesingle{}un trésor sur le board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+Ofthe\+Card} & nom de la carte trésor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la position du trésore sur le board 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a0df3fa77221ce465d013d4faf08c0a84}\label{class_game_a0df3fa77221ce465d013d4faf08c0a84}} 
+\index{Game@{Game}!getBoard@{getBoard}}
+\index{getBoard@{getBoard}!Game@{Game}}
+\subsubsection{\texorpdfstring{getBoard()}{getBoard()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_board}{Board}}\& Game\+::get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Board retourne le plateau de jeu. 
+
+\begin{DoxyReturn}{Returns}
+retourne le plateau de jeu. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a1a21ba908bedd3ca0ae4ea0f63c621d4}\label{class_game_a1a21ba908bedd3ca0ae4ea0f63c621d4}} 
+\index{Game@{Game}!getCardsOnBoard@{getCardsOnBoard}}
+\index{getCardsOnBoard@{getCardsOnBoard}!Game@{Game}}
+\subsubsection{\texorpdfstring{getCardsOnBoard()}{getCardsOnBoard()}}
+{\footnotesize\ttfamily void Game\+::get\+Cards\+On\+Board (\begin{DoxyParamCaption}\item[{map$<$ \mbox{\hyperlink{class_position}{Position}}, string $>$ \&}]{map\+To\+Fill }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Cards\+On\+Board retourne une map de toutes les trésors et leur position sur le plateau de jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+To\+Fill} & une map de toutes les trésors et leur position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a09dad4385b60fb6af3c93de9d7dad0dd}\label{class_game_a09dad4385b60fb6af3c93de9d7dad0dd}} 
+\index{Game@{Game}!getCurrentPlate@{getCurrentPlate}}
+\index{getCurrentPlate@{getCurrentPlate}!Game@{Game}}
+\subsubsection{\texorpdfstring{getCurrentPlate()}{getCurrentPlate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plate}{Plate}} const\& Game\+::get\+Current\+Plate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Current\+Plate retourne la plate courrante ou \char`\"{}plate libre\char`\"{} 
+
+\begin{DoxyReturn}{Returns}
+retourne la plate courrante 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a202099c9ce99f80dc84091761d3292eb}\label{class_game_a202099c9ce99f80dc84091761d3292eb}} 
+\index{Game@{Game}!getCurrentPlayer@{getCurrentPlayer}}
+\index{getCurrentPlayer@{getCurrentPlayer}!Game@{Game}}
+\subsubsection{\texorpdfstring{getCurrentPlayer()}{getCurrentPlayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} const\& Game\+::get\+Current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Current\+Player retourne le joueur courant. 
+
+\begin{DoxyReturn}{Returns}
+retourne le joueur courant. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_abfd280f5fdc614d8542058ca7ac82ea5}\label{class_game_abfd280f5fdc614d8542058ca7ac82ea5}} 
+\index{Game@{Game}!getGameState@{getGameState}}
+\index{getGameState@{getGameState}!Game@{Game}}
+\subsubsection{\texorpdfstring{getGameState()}{getGameState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_ad7fdf24774752f47b6a14827e8bbc073}{Game\+Status}} Game\+::get\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Game\+State retourne le satut global du jeu 
+
+\begin{DoxyReturn}{Returns}
+retourne le satut global du jeu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a669625eaa5a522e8012a3a5ea4bb1a39}\label{class_game_a669625eaa5a522e8012a3a5ea4bb1a39}} 
+\index{Game@{Game}!getPlate@{getPlate}}
+\index{getPlate@{getPlate}!Game@{Game}}
+\subsubsection{\texorpdfstring{getPlate()}{getPlate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plate}{Plate}} const\& Game\+::get\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Plate retourne la plate présente sur le plateau de jeu à la position donnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position sur le plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la plate concernée 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a8561913d7635ac1ded36b0236ece61f7}\label{class_game_a8561913d7635ac1ded36b0236ece61f7}} 
+\index{Game@{Game}!getPlayers@{getPlayers}}
+\index{getPlayers@{getPlayers}!Game@{Game}}
+\subsubsection{\texorpdfstring{getPlayers()}{getPlayers()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_player}{Player}} $>$ Game\+::get\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Players retourne la liste de tous les joueurs 
+
+\begin{DoxyReturn}{Returns}
+retourne la liste de tous les joueurs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a73c4d8e59b1ad43982115e9ff3be4d80}\label{class_game_a73c4d8e59b1ad43982115e9ff3be4d80}} 
+\index{Game@{Game}!getTurnstate@{getTurnstate}}
+\index{getTurnstate@{getTurnstate}!Game@{Game}}
+\subsubsection{\texorpdfstring{getTurnstate()}{getTurnstate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_ad84f6c74c0b4b323fe4b13b7ad31f696}{Turn\+Status}} Game\+::get\+Turnstate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Turnstate retourne le satut du tour de jeu 
+
+\begin{DoxyReturn}{Returns}
+retourne le satut du tour de jeu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_af1698fea8cf96a95427a1c5e363eac37}\label{class_game_af1698fea8cf96a95427a1c5e363eac37}} 
+\index{Game@{Game}!getWinner@{getWinner}}
+\index{getWinner@{getWinner}!Game@{Game}}
+\subsubsection{\texorpdfstring{getWinner()}{getWinner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} const  $\ast$ Game\+::get\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Winner retourne le joueur gagnant 
+
+\begin{DoxyReturn}{Returns}
+retourne le joueur gagnant, nullptr si pas de gagnant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_af7453615da19dfb6d9646bf33acccccb}\label{class_game_af7453615da19dfb6d9646bf33acccccb}} 
+\index{Game@{Game}!init@{init}}
+\index{init@{init}!Game@{Game}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Game\+::init (\begin{DoxyParamCaption}\item[{int}]{max = {\ttfamily 12} }\end{DoxyParamCaption})}
+
+
+
+init permet d\textquotesingle{}initialiser tout les composants du jeu, on peut choisir le nombre max de cartes par joueurs, ceci n\textquotesingle{}est qu\textquotesingle{}un maximum, les joueurs peuvent donc avoir moins de cartes s\textquotesingle{}il il n\textquotesingle{}y en a pas assez pour que tous aient le max, avant d\textquotesingle{}init, il faut au minimum avoir ajouté 2 joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & nombres max de carte par joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_a2e527b9d67d6f70a1b911a8e4fca77e4}\label{class_game_a2e527b9d67d6f70a1b911a8e4fca77e4}} 
+\index{Game@{Game}!insertPlate@{insertPlate}}
+\index{insertPlate@{insertPlate}!Game@{Game}}
+\subsubsection{\texorpdfstring{insertPlate()}{insertPlate()}}
+{\footnotesize\ttfamily bool Game\+::insert\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{position }\end{DoxyParamCaption})}
+
+
+
+insert\+Plate permet d\textquotesingle{}insérer une pièce dans le plateau de jeu, il est possible d\textquotesingle{}inserer une pièce (plate) sur les cases extérieurs du board et avec une des coordonées impaire. Disponible une fois par tour. 
+
+\begin{DoxyReturn}{Returns}
+vrai si la pièce est insérée, faux autrement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a972bf039217d747db1fd3487574a58a8}\label{class_game_a972bf039217d747db1fd3487574a58a8}} 
+\index{Game@{Game}!movePawn@{movePawn}}
+\index{movePawn@{movePawn}!Game@{Game}}
+\subsubsection{\texorpdfstring{movePawn()}{movePawn()}}
+{\footnotesize\ttfamily bool Game\+::move\+Pawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+move\+Pawn permet de déplacer un pion su le plateau de jeu, il faut que le joueur détenteur du pion aie préalablement insérer une plate dans le plateau, le pion ne peut se déplacer que sur un sans coupure (les plates doivent être connectées entre elles, il ne doit pas y avoir de mur qui barre la route). Si le piont à bien pu se déplacer, vérifie si le joueur à trouvé un trésore qu\textquotesingle{}il recherchait ou s\textquotesingle{}il a fini la partie enretournant sur sa base. Disponible une fois par tour. 
+
+\begin{DoxyReturn}{Returns}
+vrai si le pion à pu être bougé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a6ba6dd6ff7977278e7884642d167549d}\label{class_game_a6ba6dd6ff7977278e7884642d167549d}} 
+\index{Game@{Game}!rotate@{rotate}}
+\index{rotate@{rotate}!Game@{Game}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily bool Game\+::rotate (\begin{DoxyParamCaption}\item[{unsigned}]{rotation\+Lvl = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+rotate permet de rotate la plate \char`\"{}libre\char`\"{} d\textquotesingle{}un quart de tour dans le sens horloger 
+
+\begin{DoxyReturn}{Returns}
+vrai si la plate à bien été rotate. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a1d391affe8e71a520a9e210e76b23b45}\label{class_game_a1d391affe8e71a520a9e210e76b23b45}} 
+\index{Game@{Game}!skip@{skip}}
+\index{skip@{skip}!Game@{Game}}
+\subsubsection{\texorpdfstring{skip()}{skip()}}
+{\footnotesize\ttfamily bool Game\+::skip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skip permet de passer son tour, n\textquotesingle{}est possible que si le joueur à inséré une plate, disponible une fois par tour. 
+
+\begin{DoxyReturn}{Returns}
+vrai si le tour à été passé, faux autrement 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/game.\+h\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/game.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+<odoo>
+    
+    <record id="location0" model="eventmanager.location">
+        <field name="name">Dansaert</field>
+        <field name="town">Bruxelles</field>
+        <field name="street">Avenue Antoine Dansaert</field>
+        <field name="number">5</field>
+    </record>
+
+    <record id="location1" model="eventmanager.location">
+        <field name="name">Paquerettes</field>
+        <field name="town">Bruxelles</field>
+        <field name="street">rue des paquerettes</field>
+        <field name="number">18</field>
+    </record>
+
+    <record id="location2" model="eventmanager.location">
+        <field name="name">Coquelicots</field>
+        <field name="town">Bruxelles</field>
+        <field name="street">Avenue des Coquelicots</field>
+        <field name="number">12</field>
+    </record>
+
+    <record id="location3" model="eventmanager.location">
+        <field name="name">Paroisse</field>
+        <field name="town">Bruxelles</field>
+        <field name="street">rue de la paroisse</field>
+        <field name="number">99</field>
+    </record>
+    <record id="location4" model="eventmanager.location">
+        <field name="name">Baraka</field>
+        <field name="town">Monaco</field>
+        <field name="street">rue de la Poisse</field>
+        <field name="number">13</field>
+    </record>
+</odoo>

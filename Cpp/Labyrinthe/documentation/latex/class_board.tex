@@ -1,0 +1,184 @@
+\hypertarget{class_board}{}\section{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb}} 
+\mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_board}{Board}} notre classe tableau. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_af5b128c8f9a5005657652650103833ac}\label{class_board_af5b128c8f9a5005657652650103833ac}} 
+{\bfseries Board} (\mbox{\hyperlink{class_board}{Board}} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_board_a1d8892353c20a39369feb075406a71af}\label{class_board_a1d8892353c20a39369feb075406a71af}} 
+{\bfseries Board} (\mbox{\hyperlink{class_board}{Board}} const \&\&)=delete
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ \mbox{\hyperlink{class_board_a3945b0c050763ec67df84b980b2f3aee}{find\+Path}} (\mbox{\hyperlink{class_position}{Position}} const \&start, \mbox{\hyperlink{class_position}{Position}} const \&end) const
+\begin{DoxyCompactList}\small\item\em find\+Path method pour savoir si un pion est déplaçable \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plate}{Plate}} const  \& \mbox{\hyperlink{class_board_ada3e38ef2a96cb211f6ea1832ae50667}{get\+Plate}} (\mbox{\hyperlink{class_position}{Position}} const \&pos) const
+\begin{DoxyCompactList}\small\item\em get\+Plate getter de plate \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_ae0aca00591bd61f362c48b00a3caf80e}{insert}} (\mbox{\hyperlink{class_position}{Position}})
+\begin{DoxyCompactList}\small\item\em insert methode pour inserer la current plate a un certain endroit du tableau \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_ab386de7f0d6276c61905c52a244808d1}\label{class_board_ab386de7f0d6276c61905c52a244808d1}} 
+void \mbox{\hyperlink{class_board_ab386de7f0d6276c61905c52a244808d1}{cards\+On\+Board}} (std\+::map$<$ \mbox{\hyperlink{class_position}{Position}}, std\+::string $>$ \&) const
+\begin{DoxyCompactList}\small\item\em cards\+On\+Board methode pour récupèrer l\textquotesingle{}ensemble des cartes sur le board \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_board_a9585278deb40615be54520d8de432c21}{find\+Card\+On\+Board}} (string card) const
+\begin{DoxyCompactList}\small\item\em find\+Card\+On\+Board methode pour trouver une carte specifique sur le board \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plate}{Plate}} const  \& \mbox{\hyperlink{class_board_a63efb6f8c174f08251b2f5d4213d6358}{current\+Plate}} () const
+\begin{DoxyCompactList}\small\item\em current\+Plate getter de la current plate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_ac1987782a97787c44fe6d923b7b32067}\label{class_board_ac1987782a97787c44fe6d923b7b32067}} 
+std\+::string {\bfseries to\+String} () const
+\item 
+\mbox{\Hypertarget{class_board_a2e6c71603374a95ecc3caddf187c4b75}\label{class_board_a2e6c71603374a95ecc3caddf187c4b75}} 
+std\+::wstring {\bfseries to\+W\+String} () const
+\item 
+\mbox{\Hypertarget{class_board_a7ffcf75affd056eb807b9551dea74f5f}\label{class_board_a7ffcf75affd056eb807b9551dea74f5f}} 
+const std\+::array$<$ std\+::array$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_plate}{Plate}} $>$, M\+\_\+\+L\+A\+B\+Y\+\_\+\+S\+I\+ZE $>$, M\+\_\+\+L\+A\+B\+Y\+\_\+\+S\+I\+ZE $>$ \& {\bfseries get\+Board} ()
+\item 
+\mbox{\Hypertarget{class_board_a6de0db1394cef93968fa0b25a22e1a04}\label{class_board_a6de0db1394cef93968fa0b25a22e1a04}} 
+void \mbox{\hyperlink{class_board_a6de0db1394cef93968fa0b25a22e1a04}{rotate}} (unsigned=1)
+\begin{DoxyCompactList}\small\item\em rotate methode pour faire tourner la current plate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_ac9c76795aaccf2dfa77621a88601f4e4}\label{class_board_ac9c76795aaccf2dfa77621a88601f4e4}} 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries get\+Position\+To\+Move} (\mbox{\hyperlink{class_position}{Position}} const \&) const
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_plate}{Plate}} $\ast$ $>$ \& \mbox{\hyperlink{class_board_a3164f6e33a9c5a7a02d899407ef8a3d1}{left\+Overs}} (std\+::vector$<$ string $>$ \&, std\+::vector$<$ \mbox{\hyperlink{class_plate}{Plate}} $\ast$ $>$ \&)
+\begin{DoxyCompactList}\small\item\em left\+Overs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_a7fb0f1c798ff6cb63c3105baa0725ac9}\label{class_board_a7fb0f1c798ff6cb63c3105baa0725ac9}} 
+void \mbox{\hyperlink{class_board_a7fb0f1c798ff6cb63c3105baa0725ac9}{set\+Ptr}} (\mbox{\hyperlink{class_position}{Position}} const \&, \mbox{\hyperlink{class_plate}{Plate}} $\ast$)
+\begin{DoxyCompactList}\small\item\em set\+Ptr permet de définir un emplacement du board\+\_\+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_a1217bc275b0adb87cb9c4be7bd7887cb}\label{class_board_a1217bc275b0adb87cb9c4be7bd7887cb}} 
+bool {\bfseries is\+Acceptable} (\mbox{\hyperlink{class_position}{Position}} const \&pos, std\+::vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ \&path) const
+\item 
+\mbox{\Hypertarget{class_board_ab7e0efef605fa53eae39f7c7da29536f}\label{class_board_ab7e0efef605fa53eae39f7c7da29536f}} 
+bool {\bfseries recherche\+Path} (\mbox{\hyperlink{class_position}{Position}} const \&end, std\+::vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ \&path) const
+\item 
+\mbox{\Hypertarget{class_board_aa671443a7c9335bffc768a7c98c5d964}\label{class_board_aa671443a7c9335bffc768a7c98c5d964}} 
+bool {\bfseries is\+In\+Board\+Limit} (\mbox{\hyperlink{class_position}{Position}} const \&pos) const
+\item 
+\mbox{\Hypertarget{class_board_abd6b0539dbd0a77b0c18a41d8cf3836e}\label{class_board_abd6b0539dbd0a77b0c18a41d8cf3836e}} 
+void {\bfseries init\+Board} (\mbox{\hyperlink{class_position}{Position}} \mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{class_board_a2cf5d799795f86a50d5d6eb4bd353b93}\label{class_board_a2cf5d799795f86a50d5d6eb4bd353b93}} 
+void {\bfseries init} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_board_a3888ede548a7e4702f328c27859868f9}\label{class_board_a3888ede548a7e4702f328c27859868f9}} 
+\mbox{\hyperlink{class_card}{Card}} const \mbox{\hyperlink{class_board_a3888ede548a7e4702f328c27859868f9}{enum\+Card\+\_\+}}
+\begin{DoxyCompactList}\small\item\em enum\+Card\+\_\+ utiliser pour recuper les noms des cartes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_a1d2bd4f0383c5cb36ff2b521b66fd32a}\label{class_board_a1d2bd4f0383c5cb36ff2b521b66fd32a}} 
+\mbox{\hyperlink{class_direction}{Direction}} const \mbox{\hyperlink{class_board_a1d2bd4f0383c5cb36ff2b521b66fd32a}{enum\+Direction\+\_\+}}
+\begin{DoxyCompactList}\small\item\em enum\+Direction\+\_\+ utliser pour recuperer les noms des directions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_ac3f86695326ff95548ef60a97564ff42}\label{class_board_ac3f86695326ff95548ef60a97564ff42}} 
+std\+::array$<$ std\+::array$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_plate}{Plate}} $>$, M\+\_\+\+L\+A\+B\+Y\+\_\+\+S\+I\+ZE $>$, M\+\_\+\+L\+A\+B\+Y\+\_\+\+S\+I\+ZE $>$ \mbox{\hyperlink{class_board_ac3f86695326ff95548ef60a97564ff42}{board\+\_\+}}
+\begin{DoxyCompactList}\small\item\em board\+\_\+ tableau (fait de std\+::array) 2D , il contient les différents types de plates (liées par des pointeurs uniques) présentes sur le plateau. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_a3d026b42947838bfb5bf532f4457230e}\label{class_board_a3d026b42947838bfb5bf532f4457230e}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_plate}{Plate}} $>$ \mbox{\hyperlink{class_board_a3d026b42947838bfb5bf532f4457230e}{current\+Plate\+\_\+}}
+\begin{DoxyCompactList}\small\item\em current\+Plate\+\_\+ plate libre, utilisée pour les insetion dans le plateau \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_a63efb6f8c174f08251b2f5d4213d6358}\label{class_board_a63efb6f8c174f08251b2f5d4213d6358}} 
+\index{Board@{Board}!currentPlate@{currentPlate}}
+\index{currentPlate@{currentPlate}!Board@{Board}}
+\subsubsection{\texorpdfstring{currentPlate()}{currentPlate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plate}{Plate}} const\& Board\+::current\+Plate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+current\+Plate getter de la current plate 
+
+\begin{DoxyReturn}{Returns}
+current plate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a9585278deb40615be54520d8de432c21}\label{class_board_a9585278deb40615be54520d8de432c21}} 
+\index{Board@{Board}!findCardOnBoard@{findCardOnBoard}}
+\index{findCardOnBoard@{findCardOnBoard}!Board@{Board}}
+\subsubsection{\texorpdfstring{findCardOnBoard()}{findCardOnBoard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Board\+::find\+Card\+On\+Board (\begin{DoxyParamCaption}\item[{string}]{card }\end{DoxyParamCaption}) const}
+
+
+
+find\+Card\+On\+Board methode pour trouver une carte specifique sur le board 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & le nom de la carte a trouver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la position de la carte trouvée -\/1 -\/1 si non trouvée 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a3945b0c050763ec67df84b980b2f3aee}\label{class_board_a3945b0c050763ec67df84b980b2f3aee}} 
+\index{Board@{Board}!findPath@{findPath}}
+\index{findPath@{findPath}!Board@{Board}}
+\subsubsection{\texorpdfstring{findPath()}{findPath()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ Board\+::find\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{start,  }\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{end }\end{DoxyParamCaption}) const}
+
+
+
+find\+Path method pour savoir si un pion est déplaçable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & position de départ du pion \\
+\hline
+{\em end} & position finale du pion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retourne une liste de position si un chemin est trouvé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_ada3e38ef2a96cb211f6ea1832ae50667}\label{class_board_ada3e38ef2a96cb211f6ea1832ae50667}} 
+\index{Board@{Board}!getPlate@{getPlate}}
+\index{getPlate@{getPlate}!Board@{Board}}
+\subsubsection{\texorpdfstring{getPlate()}{getPlate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plate}{Plate}} const\& Board\+::get\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Plate getter de plate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & position de la plate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+plate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_ae0aca00591bd61f362c48b00a3caf80e}\label{class_board_ae0aca00591bd61f362c48b00a3caf80e}} 
+\index{Board@{Board}!insert@{insert}}
+\index{insert@{insert}!Board@{Board}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily bool Board\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+insert methode pour inserer la current plate a un certain endroit du tableau 
+
+\begin{DoxyReturn}{Returns}
+resultat de la tentative d\textquotesingle{}insertion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a3164f6e33a9c5a7a02d899407ef8a3d1}\label{class_board_a3164f6e33a9c5a7a02d899407ef8a3d1}} 
+\index{Board@{Board}!leftOvers@{leftOvers}}
+\index{leftOvers@{leftOvers}!Board@{Board}}
+\subsubsection{\texorpdfstring{leftOvers()}{leftOvers()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_plate}{Plate}} $\ast$ $>$ \& Board\+::left\+Overs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ string $>$ \&}]{,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_plate}{Plate}} $\ast$ $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+left\+Overs 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/board.\+h\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/board.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,153 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+The \mbox{\hyperlink{class_player}{Player}} class, joueur du jeu.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adfc9eb0b7f33b7b4f26a329cf2b88753}{Player}} (string const \&\mbox{\hyperlink{class_player_a6cc57f75295fa8f11f634a2904e9653b}{name}}, const vector$<$ string $>$ \&deck, \mbox{\hyperlink{class_pawn}{Pawn}} const \&pawn)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_player}{Player}} constructeur de player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a02a0f3b789155c97b1f928df420ee6d9}\label{class_player_a02a0f3b789155c97b1f928df420ee6d9}} 
+\mbox{\hyperlink{class_pawn}{Pawn}} const  \& {\bfseries pawn} () const
+\item 
+void \mbox{\hyperlink{class_player_ae7ee566ede118cfe993fd404a3bdca27}{Position}} (\mbox{\hyperlink{class_position}{Position}} const \&pos)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_position}{Position}} set la position du pion du joueur. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_player_a6cc57f75295fa8f11f634a2904e9653b}{name}} () const
+\begin{DoxyCompactList}\small\item\em name retourne le nom du joueur \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_player_a47b8c4d85179f5ed365d519187de0046}{get\+Current\+Card}} () const
+\begin{DoxyCompactList}\small\item\em get\+Current\+Card retourne le trésor que le joueur doit trouver \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a6a14a7da6a14d152fda0374aabdef6cb}{operator==}} (\mbox{\hyperlink{class_player}{Player}} const \&other)
+\begin{DoxyCompactList}\small\item\em operator == l\textquotesingle{}égalité est établie sur l\textquotesingle{}égalité des noms des joueurs et l\textquotesingle{}égalité de leur pion \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_af7ae24f0abe3ecaaa68eda7e8ebd11db}\label{class_player_af7ae24f0abe3ecaaa68eda7e8ebd11db}} 
+void \mbox{\hyperlink{class_player_af7ae24f0abe3ecaaa68eda7e8ebd11db}{set\+Current\+Card}} ()
+\begin{DoxyCompactList}\small\item\em set\+Current\+Card met à jour le trésor que le joueur doit trouver \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a5786ecbfaf85723d3a7f4cb126ba87bc}{has\+Finished}} () const
+\begin{DoxyCompactList}\small\item\em has\+Finished indique si le joueur à fini de joueur de jouer dans le jeu (si il a trouvé tous les trésors de son deck et qu\textquotesingle{}il est de retour sur sa case de départ) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_a46357f02330630bb2160a357936c1fda}\label{class_player_a46357f02330630bb2160a357936c1fda}} 
+string \mbox{\hyperlink{class_player_a46357f02330630bb2160a357936c1fda}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em name\+\_\+ nom du joueur \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a8a84e7c29d0a346e3a39315eb6c9e124}\label{class_player_a8a84e7c29d0a346e3a39315eb6c9e124}} 
+vector$<$ string $>$ \mbox{\hyperlink{class_player_a8a84e7c29d0a346e3a39315eb6c9e124}{deck\+\_\+}}
+\begin{DoxyCompactList}\small\item\em deck\+\_\+ cartes à jouer du joueurs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a7acaa1fb49ba7ed6541f2b5c7aea28af}\label{class_player_a7acaa1fb49ba7ed6541f2b5c7aea28af}} 
+vector$<$ string $>$ \mbox{\hyperlink{class_player_a7acaa1fb49ba7ed6541f2b5c7aea28af}{done\+\_\+}}
+\begin{DoxyCompactList}\small\item\em done\+\_\+ carte déjà jouées du joueur \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a1cff32c338c37a14a09b7d63f404a431}\label{class_player_a1cff32c338c37a14a09b7d63f404a431}} 
+\mbox{\hyperlink{class_pawn}{Pawn}} \mbox{\hyperlink{class_player_a1cff32c338c37a14a09b7d63f404a431}{pawn\+\_\+}}
+\begin{DoxyCompactList}\small\item\em pawn\+\_\+ pion du joueur \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_player}{Player}} class, joueur du jeu. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_adfc9eb0b7f33b7b4f26a329cf2b88753}\label{class_player_adfc9eb0b7f33b7b4f26a329cf2b88753}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{string const \&}]{name,  }\item[{const vector$<$ string $>$ \&}]{deck,  }\item[{\mbox{\hyperlink{class_pawn}{Pawn}} const \&}]{pawn }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_player}{Player}} constructeur de player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & nom du joueur \\
+\hline
+{\em deck} & deck du joueur \\
+\hline
+{\em pawn} & pio du joueur \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_a47b8c4d85179f5ed365d519187de0046}\label{class_player_a47b8c4d85179f5ed365d519187de0046}} 
+\index{Player@{Player}!getCurrentCard@{getCurrentCard}}
+\index{getCurrentCard@{getCurrentCard}!Player@{Player}}
+\subsubsection{\texorpdfstring{getCurrentCard()}{getCurrentCard()}}
+{\footnotesize\ttfamily string Player\+::get\+Current\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Current\+Card retourne le trésor que le joueur doit trouver 
+
+\begin{DoxyReturn}{Returns}
+le trésor que le joueur doit trouver, si plus de trésor, retourne la chaine \char`\"{}\+Aucune Carte\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a5786ecbfaf85723d3a7f4cb126ba87bc}\label{class_player_a5786ecbfaf85723d3a7f4cb126ba87bc}} 
+\index{Player@{Player}!hasFinished@{hasFinished}}
+\index{hasFinished@{hasFinished}!Player@{Player}}
+\subsubsection{\texorpdfstring{hasFinished()}{hasFinished()}}
+{\footnotesize\ttfamily bool Player\+::has\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+has\+Finished indique si le joueur à fini de joueur de jouer dans le jeu (si il a trouvé tous les trésors de son deck et qu\textquotesingle{}il est de retour sur sa case de départ) 
+
+\begin{DoxyReturn}{Returns}
+si le joueur à fini de jouer dans le jeu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a6cc57f75295fa8f11f634a2904e9653b}\label{class_player_a6cc57f75295fa8f11f634a2904e9653b}} 
+\index{Player@{Player}!name@{name}}
+\index{name@{name}!Player@{Player}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily string Player\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+name retourne le nom du joueur 
+
+\begin{DoxyReturn}{Returns}
+le nom du joueur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a6a14a7da6a14d152fda0374aabdef6cb}\label{class_player_a6a14a7da6a14d152fda0374aabdef6cb}} 
+\index{Player@{Player}!operator==@{operator==}}
+\index{operator==@{operator==}!Player@{Player}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Player\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator == l\textquotesingle{}égalité est établie sur l\textquotesingle{}égalité des noms des joueurs et l\textquotesingle{}égalité de leur pion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & le deuxième joueur de l\textquotesingle{}égalité \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si égaux, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_ae7ee566ede118cfe993fd404a3bdca27}\label{class_player_ae7ee566ede118cfe993fd404a3bdca27}} 
+\index{Player@{Player}!Position@{Position}}
+\index{Position@{Position}!Player@{Player}}
+\subsubsection{\texorpdfstring{Position()}{Position()}}
+{\footnotesize\ttfamily void Player\+::\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}} const \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_position}{Position}} set la position du pion du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & nouvelle position du pion du joueur \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/player.\+h\item 
+A\+:/\+Documents/\+E\+S\+I/dev/\+Cpp\+Labyrinthe/\+Laby\+Final/model/player.\+cpp\end{DoxyCompactItemize}

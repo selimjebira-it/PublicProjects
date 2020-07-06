@@ -1,0 +1,58 @@
+<odoo>
+    <!-- seance tree -->
+    <record id="seance_view_tree" model="ir.ui.view">
+        <field name="name">eventmanager.seance.view.tree</field>
+        <field name="model">eventmanager.seance</field>
+        <field name="arch" type="xml">
+            <tree string="seance Tree">
+                <field name="name"/>
+                <field name="instructor" ref="res.users"/>
+                <field name="course_id"/>
+            </tree>
+        </field>
+    </record>
+    <!-- seance form  -->
+    <record id="seance_view_form" model="ir.ui.view">
+        <field name="name">eventmanager.seance.view.form</field>
+        <field name="model">eventmanager.seance</field>
+        <field name="inherit_id" ref="event_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="replace">
+                <field name="name"/>
+            </xpath>
+            <xpath expr="//field[@name='description']" position="replace">
+                <field name="description"/>
+            </xpath>
+            <xpath expr="//field[@name='attendees_ids']" position="before">
+                <group string="General">
+                    <field name="instructor" ref="res.users"/>
+                    <field name="course_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <!-- seance calendar -->
+    <record id="seance_view_calendar" model="ir.ui.view">
+        <field name="name">eventmanager.seance.view.calendar</field>
+        <field name="model">eventmanager.seance</field>
+        <field name="arch" type="xml">
+            <calendar string="seances" date_start="start_date" date_stop="end_date" color="course_id">
+                <field name="name"/>
+                <field name="description"/>
+            </calendar>
+        </field>
+    </record>
+    <!-- seance action list  -->
+    <record id="seance_action" model="ir.actions.act_window">
+        <field name="name">seances</field>
+        <field name="res_model">eventmanager.seance</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">calendar,tree,form</field>
+    </record>
+    <!-- seance menu item  -->
+    <menuitem
+        id="seance_menu"
+        name="seances"
+        action="seance_action"
+        parent="main_menu"/>
+</odoo>

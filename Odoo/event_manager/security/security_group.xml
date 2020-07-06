@@ -1,0 +1,25 @@
+<odoo>
+     <data>
+        <record model="ir.module.category" id="event_manager.category_esi">
+            <field name="name">Esi groups</field>
+            <field name="description">Helps you manage</field>
+            <field name="sequence">5</field>
+        </record>
+        <record id="event_manager.group_student" model="res.groups">
+            <field name="name">Student</field>
+            <field name="category_id" ref="event_manager.category_esi"></field>
+        </record>
+        <record id="event_manager.group_teacher" model="res.groups">
+            <field name="name">Teacher</field>
+            <field name="category_id" ref="event_manager.category_esi"></field>
+        </record>
+        <record id="event_manager.group_administrative" model="res.groups">
+            <field name="name">Administrative</field>
+            <field name="category_id" ref="event_manager.category_esi"></field>
+        </record>
+        <record id="event_manager.group_administrator" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="event_manager.category_esi"></field>
+        </record>
+     </data>
+ </odoo>

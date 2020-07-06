@@ -1,0 +1,32 @@
+<odoo>
+    <!-- location tree  -->
+    <record id="location_view_tree" model="ir.ui.view">
+        <field name="name">eventmanager.location.view.tree</field>
+        <field name="model">eventmanager.location</field>
+        <field name="arch" type="xml">
+            <tree string="Location Tree">
+                <field name="name"/>
+                <field name="town"/>
+                <field name="street"/>
+                <field name="number"/>
+            </tree>
+        </field>
+    </record>
+    <!-- location form  -->
+    <record id="location_view_form" model="ir.ui.view">
+        <field name="name">eventmanager.location.view.form</field>
+        <field name="model">eventmanager.location</field>
+        <field name="arch" type="xml">
+            <form string="Location Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="town"/>
+                        <field name="street"/>
+                        <field name="number"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

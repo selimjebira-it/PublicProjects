@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buyers</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                Name
+            </tr>
+            <tr>
+                Last Name
+            </tr>
+            <tr>
+                Phone Number
+            </tr>
+
+        </thead>
+        <tbody>
+                {%for buyer in buyers%}
+                <tr>
+                    <td>
+                            {{buyer.firstName}}
+                    </td>
+                    <td>
+                            {{buyer.lastName}}
+                    </td>
+                    <td>
+                            {{buyer.phoneNumber}}
+                    </td>
+                    <td>
+                        <a href="buyer/{{buyer.id}}">details</a>
+                    </td>
+                </tr>
+                {%endfor%}
+        </tbody>
+        
+    </table>
+    
+</body>
+</html>
